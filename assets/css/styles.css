@@ -871,12 +871,13 @@ details p{margin:10px 0 0; color:rgba(238,231,218,.74); line-height:1.6}
 }
 
 /* Module meta row — single line, clean */
-.modMeta{
+.whySys .modMeta{
   position:relative;
   z-index:1;
-  display:flex;
+  display:grid;
   align-items:center;
-  gap:10px;
+  grid-template-columns: max-content 1fr;
+  gap:8px;
   font-size:11px;
   text-transform:uppercase;
   letter-spacing:.10em;
@@ -885,11 +886,8 @@ details p{margin:10px 0 0; color:rgba(238,231,218,.74); line-height:1.6}
   white-space:nowrap;
   overflow:hidden;
 }
-.modDot{
-  flex:0 0 auto;
-  width:10px; height:10px; border-radius:999px;
-  background: rgba(255,45,30,.90);
-  box-shadow: 0 0 18px rgba(255,45,30,.30);
+.whySys .modDot{
+  display:none !important;
 }
 .modMain{
   flex:0 0 auto;
@@ -908,23 +906,7 @@ details p{margin:10px 0 0; color:rgba(238,231,218,.74); line-height:1.6}
 }
 
 /* Card corner tile — add glyph so it's not empty */
-.whySys .card::after{
-  content:"≋";
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:16px;
-  font-weight:900;
-  color: rgba(255,106,0,.92);
-  position:absolute;
-  top:14px; right:14px;
-  width:34px; height:34px;
-  border-radius:10px;
-  background: rgba(255,45,30,.12);
-  border:1px solid rgba(255,45,30,.28);
-  box-shadow: inset 0 0 18px rgba(255,45,30,.10);
-  opacity:.95;
-}
+.whySys .card::after{ content:none !important; }
 
 /* Responsive */
 @media (max-width: 920px){

@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MENIPTV — King of Streaming | Plans, Setup & FAQ</title>
+  <meta name="description" content="MENIPTV — gyors setup, multi-device támogatás, valós support. Csomagok, beállítás, GYIK." />
+  <meta name="robots" content="noindex,nofollow" />
+
+  <!-- FONT (optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- IMPORTANT: RELATIVE PATH (works in root AND subfolder) -->
+  <link rel="stylesheet" href="assets/css/styles.css?v=1" />
+</head>
+
+<body>
+  <div class="pageBg" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#order" style="text-decoration:none">
+        <div class="brand__mark">MENIPTV</div>
+        <div class="brand__tag">KING OF STREAMING</div>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#features">Why</a>
+        <a href="#setup">How it works</a>
+        <a href="#plans">Plans</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="btn btn--ghost" href="#order">GET ACCESS</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="order">
+      <div class="wrap hero__grid">
+        <div class="hero__left">
+          <h1>KING <span class="muted">OF STREAMING</span></h1>
+          <p class="hero__lead">Fast setup. Multi-device. Real support.</p>
+
+          <ul class="bullets">
+            <li>⚡ Aktiválás gyorsan (jellemzően 5–15 perc)</li>
+            <li>🔥 Prémium tartalom • filmek • sorozatok • sport</li>
+            <li>📺 TV • Android • Fire TV • iOS támogatás</li>
+          </ul>
+
+          <div class="miniProof">
+            <span>✅ 24/7 Support</span>
+            <span>✅ Fast setup</span>
+            <span>✅ Clear guide</span>
+          </div>
+
+          <div class="hero__ctaRow">
+            <a class="btn btn--primary" href="#plans">VIEW PLANS</a>
+            <a class="btn btn--ghost" href="#faq">QUESTIONS?</a>
+          </div>
+        </div>
+
+        <!-- ORDER BOX -->
+        <aside class="orderBox" aria-label="Quick order">
+          <div class="orderBox__head">
+            <div class="orderBox__title">Quick Order</div>
+            <div class="orderBox__sub">We reply fast • Setup guidance included</div>
+          </div>
+
+          <form id="orderForm" class="orderForm" autocomplete="on">
+            <!-- Honeypot -->
+            <input type="text" name="company" id="company" tabindex="-1" autocomplete="off" />
+
+            <label class="field">
+              <span>Plan</span>
+              <select name="plan" id="plan" required>
+                <option value="">Select plan</option>
+                <option value="1 Month">1 Month</option>
+                <option value="3 Months">3 Months</option>
+                <option value="6 Months">6 Months</option>
+                <option value="12 Months">12 Months</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Devices</span>
+              <select name="devices" id="devices" required>
+                <option value="">Select devices</option>
+                <option value="1">1 Device</option>
+                <option value="2">2 Devices</option>
+                <option value="3">3 Devices</option>
+              </select>
+            </label>
+
+            <div class="row2">
+              <label class="field">
+                <span>Type</span>
+                <select name="type" id="type" required>
+                  <option value="New">New</option>
+                  <option value="Renewal">Renewal</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>App / Device</span>
+                <select name="app" id="app">
+                  <option value="">(optional)</option>
+                  <option value="TiviMate">TiviMate</option>
+                  <option value="IPTV Smarters">IPTV Smarters</option>
+                  <option value="Fire TV">Fire TV</option>
+                  <option value="Android TV">Android TV</option>
+                  <option value="iOS">iOS</option>
+                  <option value="Other">Other</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="field">
+              <span>Email or Telegram username</span>
+              <input type="text" name="contact" id="contact" placeholder="email@domain.com or @username" required />
+            </label>
+
+            <label class="field hidden" id="renewUserField">
+              <span>Renewal username / line</span>
+              <input type="text" name="renew_username" id="renew_username" placeholder="Your existing username" />
+            </label>
+
+            <button type="submit" class="btn btn--primary" id="submitBtn">
+              ORDER NOW
+            </button>
+
+            <div class="formMeta">
+              <span>🔒 Private</span>
+              <span>⚡ Fast reply</span>
+              <span>🛠 Setup help</span>
+            </div>
+
+            <div class="status" id="status" role="status" aria-live="polite"></div>
+
+            <a class="btn btn--telegram" id="telegramPrefill" href="https://t.me/YOUR_TELEGRAM_USERNAME_OR_BOT" target="_blank" rel="noopener">
+              Open Telegram (prefill)
+            </a>
+
+            <div class="tinyNote">
+              By ordering, you confirm you have the right to access content in your region.
+            </div>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="features">
+      <div class="wrap">
+        <h2>WHY MENIPTV?</h2>
+        <p class="lead">Built for people who hate limits.</p>
+
+        <div class="cards3">
+          <div class="card">
+            <div class="card__title">Stability mode</div>
+            <div class="card__text">Optimized routing for smoother playback.</div>
+          </div>
+          <div class="card">
+            <div class="card__title">Premium line-up</div>
+            <div class="card__text">Movies • Series • Sports • VOD.</div>
+          </div>
+          <div class="card">
+            <div class="card__title">Real support</div>
+            <div class="card__text">We actually reply and help out.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section how" id="setup">
+      <div class="wrap">
+        <h2>HOW IT WORKS</h2>
+        <div class="how__steps">
+          <div class="step"><span class="step__n">1</span> Choose plan</div>
+          <div class="stepArrow">→</div>
+          <div class="step"><span class="step__n">2</span> Send order</div>
+          <div class="stepArrow">→</div>
+          <div class="step"><span class="step__n">3</span> Receive setup</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANS -->
+    <section class="section" id="plans">
+      <div class="wrap">
+        <h2>OUR PLANS</h2>
+        <p class="lead">Pick your plan — then order in one minute.</p>
+
+        <div class="pricing3">
+          <div class="price">
+            <div class="price__name">Starter</div>
+            <ul>
+              <li>✓ Live + VOD</li>
+              <li>✓ Fast activation</li>
+              <li>✓ Setup help</li>
+            </ul>
+            <a class="btn btn--ghost" href="#order">GET THIS PLAN</a>
+          </div>
+
+          <div class="price price--best">
+            <div class="badge">BEST DEAL</div>
+            <div class="price__name">Best Deal</div>
+            <ul>
+              <li>✓ Live + VOD</li>
+              <li>✓ Priority support</li>
+              <li>✓ Fast activation</li>
+            </ul>
+            <a class="btn btn--primary" href="#order">GET THIS PLAN</a>
+          </div>
+
+          <div class="price">
+            <div class="price__name">Ultimate</div>
+            <ul>
+              <li>✓ Live + VOD</li>
+              <li>✓ Multi-device</li>
+              <li>✓ Setup help</li>
+            </ul>
+            <a class="btn btn--ghost" href="#order">GET THIS PLAN</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap">
+        <h2>FAQ</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>How fast is setup?</summary>
+            <p>Typically within minutes after we confirm your order details (peak times may vary).</p>
+          </details>
+          <details>
+            <summary>What app should I use?</summary>
+            <p>Common options include TiviMate and IPTV Smarters. We’ll guide you based on your device.</p>
+          </details>
+          <details>
+            <summary>Can I renew my existing line?</summary>
+            <p>Yes. Choose “Renewal” and add your existing username/line.</p>
+          </details>
+          <details>
+            <summary>Do you help with setup?</summary>
+            <p>Yes — quick guide + support if needed.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FOOTER -->
+    <section class="ctaFooter">
+      <div class="wrap ctaFooter__inner">
+        <div>
+          <div class="ctaFooter__title">READY TO SWITCH TO NO-LIMITS STREAMING?</div>
+          <div class="ctaFooter__sub">Order now — we reply fast.</div>
+        </div>
+        <a class="btn btn--primary" href="#order">ORDER NOW</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <div class="footer__left">© <span id="y"></span> MENIPTV</div>
+        <div class="footer__right">Support: Telegram / Email</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- IMPORTANT: RELATIVE PATH -->
+  <script src="assets/js/order.js?v=1"></script>
+</body>
+</html>

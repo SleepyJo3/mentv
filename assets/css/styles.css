@@ -328,24 +328,25 @@ a{color:inherit}
 /* Content wall - cinematic break */
 .contentWall{
   position:relative;
-  padding:96px 0 90px;
+  min-height: clamp(360px, 55vh, 520px);
+  padding: clamp(110px, 12vh, 150px) 0 clamp(96px, 10vh, 130px);
   background-image:
     radial-gradient(900px 420px at 18% 45%, rgba(255,106,0,.2), transparent 65%),
     linear-gradient(180deg, rgba(5,5,8,.78) 0%, rgba(5,5,8,.35) 40%, rgba(5,5,8,.85) 100%),
-    url("../img/content-wall.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+    url("../img/content-wall.webp?v=2");
+  background-position: center, center, 50% 50%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: auto, auto, contain;
   overflow:hidden;
 }
 .contentWall::before{
   content:"";
   position:absolute; inset:0; z-index:0;
   background:
-    linear-gradient(180deg, rgba(4,4,6,.95) 0%, rgba(4,4,6,.65) 18%, rgba(4,4,6,.25) 52%, rgba(4,4,6,.88) 100%),
-    linear-gradient(90deg, rgba(4,4,6,.92) 0%, rgba(4,4,6,.25) 45%, rgba(4,4,6,.92) 100%),
-    radial-gradient(680px 240px at 50% 6%, rgba(255,35,35,.35), transparent 70%);
-  opacity:.92;
+    linear-gradient(180deg, rgba(4,4,6,0) 0%, rgba(4,4,6,.6) 16%, rgba(4,4,6,.25) 48%, rgba(4,4,6,.92) 100%),
+    linear-gradient(90deg, rgba(4,4,6,.88) 0%, rgba(4,4,6,.18) 45%, rgba(4,4,6,.88) 100%),
+    radial-gradient(720px 260px at 50% 4%, rgba(255,35,35,.35), transparent 70%);
+  opacity:.94;
   pointer-events:none;
 }
 .contentWall::after{
@@ -369,15 +370,15 @@ a{color:inherit}
   z-index:2;
   display:flex;
   align-items:center;
-  min-height:320px;
+  min-height:360px;
 }
 .contentWall__copy{
   max-width:560px;
   padding:22px 26px;
   border-radius:18px;
-  background: rgba(6,6,9,.7);
-  border:1px solid rgba(255,45,30,.35);
-  box-shadow: 0 24px 46px rgba(0,0,0,.7), inset 0 0 30px rgba(255,106,0,.12);
+  background: rgba(7,7,10,.52);
+  border:1px solid rgba(255,45,30,.28);
+  box-shadow: 0 24px 46px rgba(0,0,0,.6), inset 0 0 30px rgba(255,106,0,.12);
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 .contentWall__copy:hover{
@@ -659,11 +660,12 @@ details p{margin:10px 0 0; color:rgba(238,231,218,.74); line-height:1.6}
   .row2{grid-template-columns:1fr}
   .price--best{transform:none}
   .contentWall{
-    padding:82px 0 76px;
-    background-size: cover;
-    background-position: 50% 40%;
+    min-height: clamp(360px, 70vh, 540px);
+    padding: clamp(88px, 12vh, 120px) 0 clamp(84px, 10vh, 110px);
+    background-size: auto, auto, cover;
+    background-position: center, center, 50% 35%;
   }
-  .contentWall__inner{min-height:240px}
+  .contentWall__inner{min-height:280px}
   .contentWall__copy{max-width:100%}
   .ctaFooter__inner{flex-direction:column; align-items:flex-start}
 }

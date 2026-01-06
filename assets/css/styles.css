@@ -328,18 +328,25 @@ a{color:inherit}
 /* Content wall - cinematic break */
 .contentWall{
   position:relative;
-  padding:80px 0;
-  background: url("../img/content-wall2.webp") center/cover no-repeat;
+  padding:96px 0 90px;
+  background-image:
+    radial-gradient(900px 420px at 18% 45%, rgba(255,106,0,.2), transparent 65%),
+    linear-gradient(180deg, rgba(5,5,8,.78) 0%, rgba(5,5,8,.35) 40%, rgba(5,5,8,.85) 100%),
+    url("../img/content-wall.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   overflow:hidden;
 }
 .contentWall::before{
   content:"";
   position:absolute; inset:0; z-index:0;
   background:
-    linear-gradient(90deg, rgba(3,3,6,.96) 0%, rgba(3,3,6,.35) 45%, rgba(3,3,6,.96) 100%),
-    radial-gradient(900px 420px at 18% 40%, rgba(255,106,0,.25), transparent 65%),
-    radial-gradient(900px 420px at 80% 60%, rgba(255,35,35,.32), transparent 65%);
-  opacity:.85;
+    linear-gradient(180deg, rgba(4,4,6,.95) 0%, rgba(4,4,6,.65) 18%, rgba(4,4,6,.25) 52%, rgba(4,4,6,.88) 100%),
+    linear-gradient(90deg, rgba(4,4,6,.92) 0%, rgba(4,4,6,.25) 45%, rgba(4,4,6,.92) 100%),
+    radial-gradient(680px 240px at 50% 6%, rgba(255,35,35,.35), transparent 70%);
+  opacity:.92;
+  pointer-events:none;
 }
 .contentWall::after{
   content:"";
@@ -349,11 +356,12 @@ a{color:inherit}
     repeating-linear-gradient(90deg, rgba(255,255,255,.12) 0 1px, rgba(255,255,255,0) 1px 48px),
     repeating-linear-gradient(0deg, rgba(255,255,255,.08) 0 1px, rgba(255,255,255,0) 1px 28px),
     repeating-linear-gradient(0deg, rgba(255,255,255,.05) 0 1px, rgba(255,255,255,0) 1px 4px),
-    radial-gradient(120px 80px at 20% 30%, rgba(255,106,0,.55), transparent 70%),
-    radial-gradient(140px 90px at 70% 60%, rgba(255,35,35,.45), transparent 70%);
-  opacity:.42;
+    radial-gradient(220px 120px at 18% 22%, rgba(255,106,0,.5), transparent 70%),
+    radial-gradient(260px 160px at 70% 62%, rgba(255,35,35,.45), transparent 70%),
+    linear-gradient(90deg, transparent 0%, rgba(255,35,35,.45) 48%, transparent 60%);
+  opacity:.38;
   mix-blend-mode:screen;
-  filter: blur(.2px);
+  filter: blur(.35px);
   pointer-events:none;
 }
 .contentWall__inner{
@@ -361,7 +369,7 @@ a{color:inherit}
   z-index:2;
   display:flex;
   align-items:center;
-  min-height:260px;
+  min-height:320px;
 }
 .contentWall__copy{
   max-width:560px;
@@ -650,7 +658,12 @@ details p{margin:10px 0 0; color:rgba(238,231,218,.74); line-height:1.6}
   .cards3,.pricing3{grid-template-columns:1fr}
   .row2{grid-template-columns:1fr}
   .price--best{transform:none}
-  .contentWall__inner{min-height:200px}
+  .contentWall{
+    padding:82px 0 76px;
+    background-size: cover;
+    background-position: 50% 40%;
+  }
+  .contentWall__inner{min-height:240px}
   .contentWall__copy{max-width:100%}
   .ctaFooter__inner{flex-direction:column; align-items:flex-start}
 }

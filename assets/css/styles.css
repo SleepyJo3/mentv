@@ -322,8 +322,45 @@ a{color:inherit}
   text-transform:uppercase;
   font-size:13px;
 }
-#features{padding:44px 0 30px}
-#features .lead{margin-bottom:12px}
+#features{
+  padding:110px 0 90px;
+  margin-top:16px;
+  background:
+    radial-gradient(900px 340px at 50% -10%, rgba(255,45,30,.28), transparent 68%),
+    radial-gradient(520px 220px at 16% 22%, rgba(255,106,0,.18), transparent 72%),
+    linear-gradient(180deg, rgba(10,10,14,.95), rgba(5,5,8,.98));
+  box-shadow: inset 0 1px 0 rgba(255,45,30,.22), 0 -28px 60px rgba(0,0,0,.6);
+  overflow:hidden;
+}
+#features .wrap{
+  position:relative;
+  z-index:1;
+}
+#features .wrap::before{
+  content:"";
+  position:absolute;
+  inset:-60px -20px -80px;
+  z-index:-1;
+  background:
+    radial-gradient(700px 320px at 78% 18%, rgba(255,45,30,.18), transparent 70%),
+    radial-gradient(520px 260px at 26% 70%, rgba(255,120,80,.12), transparent 68%);
+  opacity:.95;
+}
+#features h2{
+  margin-bottom:10px;
+  font-size:12px;
+  letter-spacing:.26em;
+  color:rgba(255,140,100,.9);
+}
+.features__headline{
+  margin:0 0 22px;
+  font-size:28px;
+  font-weight:900;
+  color:#fff2e8;
+  letter-spacing:.01em;
+  text-transform:none;
+  max-width:560px;
+}
 
 /* Content wall - cinematic break */
 .contentWall{
@@ -451,22 +488,59 @@ a{color:inherit}
 }
 
 /* Feature cards */
-.cards3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+.cards3{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px}
 .card{
-  background: linear-gradient(180deg, var(--cardA), var(--cardB));
-  border:1px solid rgba(255,45,30,.25);
+  background: linear-gradient(180deg, rgba(10,10,14,.98), rgba(4,4,8,.98));
+  border:1px solid rgba(255,45,30,.35);
   border-radius:16px;
-  padding:18px;
-  box-shadow: 0 12px 30px rgba(0,0,0,.5), inset 0 0 24px rgba(255,45,30,.08);
-  transition: transform .18s ease, box-shadow .2s ease, border-color .2s ease;
+  padding:22px;
+  box-shadow: 0 16px 36px rgba(0,0,0,.6), inset 0 0 30px rgba(255,45,30,.12);
+  position:relative;
+  transition: transform .2s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.card::before{
+  content:"";
+  display:block;
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  border:1px solid rgba(255,80,60,.55);
+  background:
+    radial-gradient(14px 14px at 30% 30%, rgba(255,255,255,.35), transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(255,80,60,.6), rgba(120,10,10,.9));
+  box-shadow: 0 0 18px rgba(255,45,30,.45), inset 0 0 12px rgba(255,120,80,.4);
+  margin-bottom:14px;
+}
+.card:nth-child(2)::before{
+  background:
+    radial-gradient(14px 14px at 30% 30%, rgba(255,255,255,.35), transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(255,140,60,.6), rgba(110,15,10,.92));
+}
+.card:nth-child(3)::before{
+  background:
+    radial-gradient(14px 14px at 30% 30%, rgba(255,255,255,.35), transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(255,60,90,.6), rgba(100,10,20,.92));
 }
 .card:hover{
-  transform: translateY(-3px);
-  border-color: rgba(255,45,30,.55);
-  box-shadow: 0 20px 36px rgba(0,0,0,.6), 0 0 22px rgba(255,45,30,.2);
+  transform: translateY(-6px);
+  border-color: rgba(255,45,30,.75);
+  box-shadow: 0 26px 48px rgba(0,0,0,.7), 0 0 28px rgba(255,45,30,.35);
 }
-.card__title{font-weight:900; color:rgba(238,231,218,.94); margin-bottom:8px; letter-spacing:.02em}
-.card__text{color:rgba(238,231,218,.74); font-size:13px; line-height:1.6}
+.card:hover::before{
+  box-shadow: 0 0 24px rgba(255,45,30,.7), inset 0 0 16px rgba(255,140,90,.5);
+}
+.card__title{
+  font-weight:900;
+  color:rgba(255,245,235,.96);
+  margin-bottom:8px;
+  letter-spacing:.03em;
+  font-size:16px;
+}
+.card__text{
+  color:rgba(238,231,218,.82);
+  font-size:14px;
+  line-height:1.7;
+}
 
 /* How it works - more prominent w/ red structure */
 .how{padding-top:28px}

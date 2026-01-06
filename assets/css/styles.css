@@ -39,7 +39,9 @@ a{color:inherit}
 .pageBg::after{
   content:"";
   position:absolute; inset:0; z-index:-2;
-  background:url("../img/texture.webp") center/cover no-repeat;
+  background:
+    url("/mentv/assets/img/texture.webp") center/cover no-repeat,
+    url("../img/texture.webp") center/cover no-repeat;
   opacity:.08;
   pointer-events:none;
 }
@@ -118,7 +120,10 @@ a{color:inherit}
 .hero::after{
   content:"";
   position:absolute; inset:0; z-index:-2;
-  background: url("../img/hero.webp") 58% 25% / cover no-repeat;
+  background:
+    url("/mentv/assets/img/hero.webp") 58% 25% / cover no-repeat,
+    url("../img/hero.webp") 58% 25% / cover no-repeat,
+    radial-gradient(1200px 700px at 60% 0%, rgba(7,7,9,.65), rgba(7,7,9,.95));
   opacity:.86;
   filter: contrast(1.03) saturate(1.02);
 }
@@ -326,7 +331,9 @@ details p{margin:10px 0 0; color:rgba(238,231,218,.74); line-height:1.6}
 .ctaFooter::before{
   content:"";
   position:absolute; inset:0; z-index:-2;
-  background: url("../img/cta-footer.webp") center/cover no-repeat;
+  background:
+    url("/mentv/assets/img/cta-footer.webp") center/cover no-repeat,
+    url("../img/cta-footer.webp") center/cover no-repeat;
   opacity:.92;
 }
 .ctaFooter::after{

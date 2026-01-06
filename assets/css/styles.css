@@ -295,6 +295,7 @@ a{color:inherit}
     linear-gradient(90deg, rgba(6,6,10,.92) 0%, rgba(6,6,10,.35) 45%, rgba(6,6,10,.88) 100%),
     radial-gradient(900px 420px at 18% 40%, rgba(241,194,125,.18), transparent 65%),
     radial-gradient(900px 420px at 80% 60%, rgba(184,50,50,.22), transparent 65%);
+  opacity:.6;
 }
 .contentWall::after{
   content:"";
@@ -338,6 +339,34 @@ a{color:inherit}
   line-height:1.3;
   text-shadow: 0 12px 28px rgba(0,0,0,.7);
 }
+.contentWall__sub{
+  margin:10px 0 0;
+  color:rgba(238,231,218,.8);
+  line-height:1.6;
+  font-size:14px;
+}
+.contentWall__chips{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 12px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:rgba(238,231,218,.9);
+  background: rgba(10,10,14,.55);
+  border:1px solid rgba(241,194,125,.35);
+  box-shadow: inset 0 0 12px rgba(241,194,125,.12);
+}
+.chip:hover{border-color: rgba(241,194,125,.6)}
 
 /* Feature cards */
 .cards3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}

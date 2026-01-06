@@ -328,46 +328,42 @@ a{color:inherit}
 /* Content wall - cinematic break */
 .contentWall{
   position:relative;
-  min-height: clamp(360px, 55vh, 520px);
+  min-height: clamp(380px, 52vh, 460px);
   padding: clamp(110px, 12vh, 150px) 0 clamp(96px, 10vh, 130px);
   background-image:
-    radial-gradient(900px 420px at 18% 45%, rgba(255,106,0,.2), transparent 65%),
-    linear-gradient(180deg, rgba(5,5,8,.78) 0%, rgba(5,5,8,.35) 40%, rgba(5,5,8,.85) 100%),
-    url("../img/content-wall.webp?v=2");
-  background-position: center, center, 50% 50%;
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: auto, auto, contain;
+    linear-gradient(180deg, rgba(255,40,30,.28) 0%, rgba(255,40,30,0) 10%),
+    radial-gradient(900px 420px at 16% 46%, rgba(255,106,0,.16), transparent 68%),
+    radial-gradient(760px 360px at 78% 56%, rgba(255,40,30,.12), transparent 70%),
+    url("../img/content-wall.webp?v=3");
+  background-position: center, center, center, 50% 50%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 100% 100%, auto, auto, contain;
   overflow:hidden;
 }
 .contentWall::before{
   content:"";
   position:absolute; inset:0; z-index:0;
   background:
-    linear-gradient(180deg, rgba(4,4,6,0) 0%, rgba(4,4,6,.6) 16%, rgba(4,4,6,.25) 48%, rgba(4,4,6,.92) 100%),
-    linear-gradient(90deg, rgba(4,4,6,.88) 0%, rgba(4,4,6,.18) 45%, rgba(4,4,6,.88) 100%),
-    radial-gradient(720px 260px at 50% 4%, rgba(255,35,35,.35), transparent 70%);
-  opacity:.94;
+    linear-gradient(180deg, rgba(4,4,6,.75) 0%, rgba(4,4,6,.4) 45%, rgba(4,4,6,.55) 100%),
+    linear-gradient(90deg, rgba(4,4,6,.62) 0%, rgba(4,4,6,.24) 45%, rgba(4,4,6,.48) 100%);
+  opacity:.9;
   pointer-events:none;
 }
 .contentWall::after{
   content:"";
-  position:absolute; inset:-10%; z-index:1;
+  position:absolute; inset:-6%; z-index:0;
   background:
-    url("../img/texture.webp") center/cover no-repeat,
-    repeating-linear-gradient(90deg, rgba(255,255,255,.12) 0 1px, rgba(255,255,255,0) 1px 48px),
-    repeating-linear-gradient(0deg, rgba(255,255,255,.08) 0 1px, rgba(255,255,255,0) 1px 28px),
-    repeating-linear-gradient(0deg, rgba(255,255,255,.05) 0 1px, rgba(255,255,255,0) 1px 4px),
-    radial-gradient(220px 120px at 18% 22%, rgba(255,106,0,.5), transparent 70%),
-    radial-gradient(260px 160px at 70% 62%, rgba(255,35,35,.45), transparent 70%),
-    linear-gradient(90deg, transparent 0%, rgba(255,35,35,.45) 48%, transparent 60%);
-  opacity:.38;
+    radial-gradient(420px 280px at 78% 55%, rgba(255,255,255,.08), transparent 68%),
+    radial-gradient(520px 320px at 82% 60%, rgba(255,120,60,.08), transparent 70%),
+    radial-gradient(520px 220px at 20% 18%, rgba(255,40,30,.12), transparent 70%);
+  opacity:.45;
   mix-blend-mode:screen;
   filter: blur(.35px);
   pointer-events:none;
 }
 .contentWall__inner{
   position:relative;
-  z-index:2;
+  z-index:1;
   display:flex;
   align-items:center;
   min-height:360px;
@@ -660,10 +656,10 @@ details p{margin:10px 0 0; color:rgba(238,231,218,.74); line-height:1.6}
   .row2{grid-template-columns:1fr}
   .price--best{transform:none}
   .contentWall{
-    min-height: clamp(360px, 70vh, 540px);
+    min-height: clamp(320px, 60vh, 380px);
     padding: clamp(88px, 12vh, 120px) 0 clamp(84px, 10vh, 110px);
-    background-size: auto, auto, cover;
-    background-position: center, center, 50% 35%;
+    background-size: 100% 100%, auto, auto, cover;
+    background-position: center, center, center, 50% 35%;
   }
   .contentWall__inner{min-height:280px}
   .contentWall__copy{max-width:100%}

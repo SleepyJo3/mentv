@@ -112,7 +112,7 @@ a{color:inherit}
 
 /* Hero */
 .hero{
-  padding:44px 0 26px;
+  padding:58px 0 36px;
   position:relative;
 }
 .hero::after{
@@ -138,27 +138,28 @@ a{color:inherit}
 }
 .hero__left h1{
   margin:0 0 10px;
-  font-size: clamp(36px, 5vw, 58px);
-  letter-spacing:.02em;
+  font-size: clamp(38px, 5.6vw, 64px);
+  letter-spacing:.03em;
+  line-height:1.05;
   text-transform:uppercase;
 }
-.hero__lead{margin:0 0 12px; color:rgba(238,231,218,.78); max-width:42ch}
+.hero__lead{margin:0 0 16px; color:rgba(238,231,218,.8); max-width:44ch; line-height:1.6}
 .muted{color: rgba(238,231,218,.65)}
 
 .bullets{
   margin:0; padding-left:18px;
   color:rgba(238,231,218,.9);
-  line-height:1.65;
+  line-height:1.7;
 }
-.miniProof{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; color:rgba(238,231,218,.78); font-size:13px}
-.hero__ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+.miniProof{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px; color:rgba(238,231,218,.76); font-size:13px}
+.hero__ctaRow{display:flex; gap:12px; flex-wrap:wrap; margin-top:20px}
 
 /* Order box */
 .orderBox{
-  border-radius:16px;
+  border-radius:18px;
   background: linear-gradient(180deg, rgba(18,18,22,.88), rgba(8,8,12,.92));
-  border: 1px solid rgba(241,194,125,.22);
-  box-shadow: 0 0 40px rgba(0,0,0,.55), 0 0 35px rgba(241,194,125,.12);
+  border: 1px solid rgba(241,194,125,.28);
+  box-shadow: 0 18px 48px rgba(0,0,0,.55), 0 0 26px rgba(241,194,125,.12);
   position:relative;
   overflow:hidden;
 }
@@ -166,13 +167,13 @@ a{color:inherit}
   content:"";
   position:absolute; left:0; right:0; bottom:-1px; height:28px;
   background: linear-gradient(90deg, transparent, rgba(241,194,125,.25), transparent);
-  opacity:.55;
+  opacity:.45;
 }
-.orderBox__head{padding:16px 16px 0}
+.orderBox__head{padding:18px 18px 0}
 .orderBox__title{font-weight:900; color:rgba(241,194,125,.92); letter-spacing:.10em; text-transform:uppercase}
-.orderBox__sub{color:rgba(238,231,218,.72); font-size:13px; margin-top:6px}
+.orderBox__sub{color:rgba(238,231,218,.72); font-size:13px; margin-top:6px; line-height:1.5}
 
-.orderForm{padding:14px 16px 16px}
+.orderForm{padding:16px 18px 18px}
 #company{display:none}
 
 .field{display:block; margin-top:12px}
@@ -181,9 +182,9 @@ a{color:inherit}
 .field input, .field select{
   width:100%;
   padding:12px 12px;
-  border-radius:10px;
+  border-radius:12px;
   background: rgba(10,10,14,.85);
-  border:1px solid rgba(241,194,125,.22);
+  border:1px solid rgba(241,194,125,.26);
   color:rgba(238,231,218,.92);
   outline:none;
 }
@@ -197,7 +198,7 @@ a{color:inherit}
 .orderForm .btn--primary{
   width:100%;
   margin-top:14px;
-  padding:14px 16px;
+  padding:15px 16px;
   text-transform:uppercase;
   letter-spacing:.10em;
 }
@@ -222,48 +223,51 @@ a{color:inherit}
   color:rgba(241,194,125,.92);
   letter-spacing:.10em;
   text-transform:uppercase;
+  font-size:13px;
 }
 
 /* Feature cards */
 .cards3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
 .card{
   background: linear-gradient(180deg, var(--cardA), var(--cardB));
-  border:1px solid rgba(241,194,125,.18);
-  border-radius:14px;
-  padding:16px;
+  border:1px solid rgba(241,194,125,.2);
+  border-radius:16px;
+  padding:18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
 }
-.card__title{font-weight:900; color:rgba(238,231,218,.92); margin-bottom:6px; letter-spacing:.02em}
-.card__text{color:rgba(238,231,218,.72); font-size:13px; line-height:1.5}
+.card__title{font-weight:900; color:rgba(238,231,218,.94); margin-bottom:8px; letter-spacing:.02em}
+.card__text{color:rgba(238,231,218,.74); font-size:13px; line-height:1.6}
 
 /* How it works - more prominent w/ red structure */
 .how{padding-top:18px}
 .how__steps{
   display:flex; align-items:center; justify-content:center;
-  gap:12px; flex-wrap:wrap;
-  padding:14px 16px;
-  border-radius:14px;
-  background: rgba(10,10,14,.55);
-  border:1px solid rgba(241,194,125,.14);
-  box-shadow: 0 0 28px rgba(0,0,0,.35);
+  gap:14px; flex-wrap:wrap;
+  padding:16px 18px;
+  border-radius:16px;
+  background: rgba(10,10,14,.6);
+  border:1px solid rgba(241,194,125,.22);
+  box-shadow: 0 16px 34px rgba(0,0,0,.45);
 }
 .step{
   display:flex; align-items:center; gap:10px;
   font-weight:900;
   color:rgba(238,231,218,.88);
   text-transform:uppercase;
-  letter-spacing:.04em;
+  letter-spacing:.05em;
+  font-size:13px;
 }
 .step__n{
-  width:34px; height:34px; border-radius:999px;
+  width:36px; height:36px; border-radius:999px;
   display:inline-flex; align-items:center; justify-content:center;
-  background: rgba(184,50,50,.18);
-  border: 1px solid rgba(184,50,50,.55);
-  box-shadow: 0 0 16px var(--redGlow);
+  background: rgba(184,50,50,.16);
+  border: 1px solid rgba(184,50,50,.5);
+  box-shadow: 0 0 12px var(--redGlow);
   color: #ffd9d9;
 }
 .stepArrow{
-  color: rgba(184,50,50,.85);
-  text-shadow: 0 0 16px var(--redGlow);
+  color: rgba(184,50,50,.75);
+  text-shadow: 0 0 10px var(--redGlow);
   font-weight:900;
   font-size:18px;
 }
@@ -272,23 +276,24 @@ a{color:inherit}
 .pricing3{display:grid; grid-template-columns: repeat(3,1fr); gap:14px}
 .price{
   background: linear-gradient(180deg, var(--cardA), var(--cardB));
-  border:1px solid rgba(241,194,125,.18);
-  border-radius:16px;
-  padding:16px;
+  border:1px solid rgba(241,194,125,.2);
+  border-radius:18px;
+  padding:18px;
   position:relative;
+  box-shadow: 0 14px 32px rgba(0,0,0,.4);
 }
-.price ul{margin:12px 0 16px; padding-left:18px; color:rgba(238,231,218,.78); line-height:1.6}
-.price__name{font-weight:950; font-size:22px; color:rgba(238,231,218,.92)}
+.price ul{margin:14px 0 18px; padding-left:18px; color:rgba(238,231,218,.78); line-height:1.65}
+.price__name{font-weight:950; font-size:23px; color:rgba(238,231,218,.94); letter-spacing:.01em}
 .price--best{
-  border-color: rgba(241,194,125,.42);
-  box-shadow: 0 0 36px rgba(241,194,125,.16);
-  transform: translateY(-4px);
+  border-color: rgba(241,194,125,.48);
+  box-shadow: 0 20px 46px rgba(0,0,0,.55), 0 0 34px rgba(241,194,125,.18);
+  transform: translateY(-6px);
 }
 .badge{
   position:absolute; top:12px; right:12px;
-  background: rgba(184,50,50,.18);
-  border: 1px solid rgba(184,50,50,.55);
-  box-shadow: 0 0 16px var(--redGlow);
+  background: rgba(184,50,50,.16);
+  border: 1px solid rgba(184,50,50,.5);
+  box-shadow: 0 0 12px var(--redGlow);
   color:#ffd9d9;
   font-weight:900;
   font-size:11px;
@@ -301,16 +306,17 @@ a{color:inherit}
 .faq{display:grid; gap:10px}
 details{
   background: linear-gradient(180deg, var(--cardA), var(--cardB));
-  border:1px solid rgba(241,194,125,.16);
-  border-radius:14px;
-  padding:12px 14px;
+  border:1px solid rgba(241,194,125,.2);
+  border-radius:16px;
+  padding:14px 16px;
 }
 summary{
   cursor:pointer;
   font-weight:900;
-  color:rgba(238,231,218,.9);
+  color:rgba(238,231,218,.94);
+  letter-spacing:.01em;
 }
-details p{margin:10px 0 0; color:rgba(238,231,218,.72); line-height:1.55}
+details p{margin:10px 0 0; color:rgba(238,231,218,.74); line-height:1.6}
 
 /* CTA footer */
 .ctaFooter{

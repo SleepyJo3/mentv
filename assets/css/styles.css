@@ -754,3 +754,156 @@ details p{margin:10px 0 0; color:rgba(238,231,218,.74); line-height:1.6}
   .contentWall__copy{max-width:100%}
   .ctaFooter__inner{flex-direction:column; align-items:flex-start}
 }
+
+/* WHY MENIPTV — SYSTEM STATUS MODULES (scoped) */
+.whySys{
+  position:relative;
+  padding:64px 0;
+  background:
+    radial-gradient(900px 520px at 20% 30%, rgba(255,45,30,.14), transparent 62%),
+    radial-gradient(900px 520px at 80% 30%, rgba(255,106,0,.10), transparent 62%);
+}
+.whySys::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background: linear-gradient(180deg, rgba(0,0,0,.40), rgba(0,0,0,.70));
+  opacity:.9;
+}
+.whySys .wrap{ position:relative; z-index:1; }
+
+/* SYSTEM STRIP (EXTRA) */
+.sysStrip{
+  margin-top:14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:12px 14px;
+  border-radius:16px;
+  background: linear-gradient(180deg, rgba(14,14,20,.72), rgba(8,8,12,.90));
+  border:1px solid rgba(255,45,30,.28);
+  box-shadow: 0 18px 44px rgba(0,0,0,.62), inset 0 0 24px rgba(255,45,30,.06);
+}
+.sysStrip__left{ display:flex; align-items:center; gap:10px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; font-size:12px; }
+.sysStrip__right{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+.sysDot{
+  width:10px; height:10px; border-radius:999px;
+  background: rgba(60,255,120,.95);
+  box-shadow: 0 0 14px rgba(60,255,120,.35);
+}
+.sysLabel{ color: rgba(238,231,218,.70); }
+.sysState{ color: rgba(255,255,255,.92); }
+.sysChip{
+  display:inline-flex; align-items:center; gap:6px;
+  padding:7px 10px;
+  border-radius:999px;
+  background: rgba(10,10,14,.65);
+  border:1px solid rgba(255,45,30,.24);
+  color: rgba(238,231,218,.80);
+  font-weight:900;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  font-size:11px;
+}
+.sysChip b{ color: rgba(255,106,0,.95); }
+
+/* Pulse only on Stability chip */
+.sysStrip__right .sysChip:first-child{
+  position:relative;
+  border-color: rgba(255,45,30,.35);
+  box-shadow: 0 0 18px rgba(255,45,30,.14);
+}
+.sysStrip__right .sysChip:first-child::after{
+  content:"";
+  position:absolute;
+  inset:-6px;
+  border-radius:999px;
+  border:1px solid rgba(255,45,30,.35);
+  opacity:.0;
+  animation: sysPulse 2.2s ease-in-out infinite;
+}
+@keyframes sysPulse{
+  0%{ transform:scale(.98); opacity:.0; }
+  35%{ opacity:.25; }
+  70%{ transform:scale(1.03); opacity:.0; }
+  100%{ opacity:.0; }
+}
+
+/* Cards become modules (scoped) */
+.whySys .cards3{ margin-top:16px; }
+.whySys .card{
+  background: linear-gradient(180deg, rgba(14,14,20,.82), rgba(8,8,12,.94));
+  border:1px solid rgba(255,45,30,.22);
+  box-shadow: 0 20px 52px rgba(0,0,0,.66), inset 0 0 28px rgba(255,45,30,.05);
+  position:relative;
+  overflow:hidden;
+}
+.whySys .card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(240px 140px at 18% 18%, rgba(255,45,30,.12), transparent 60%),
+    radial-gradient(260px 160px at 85% 20%, rgba(255,106,0,.10), transparent 62%);
+  opacity:.9;
+}
+.whySys .card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(255,45,30,.48);
+  box-shadow: 0 28px 70px rgba(0,0,0,.72), 0 0 22px rgba(255,45,30,.18);
+}
+.whySys .card h3{
+  margin-top:10px;
+  font-size:14px;
+  letter-spacing:.08em;
+}
+.whySys .card p{
+  font-size:13px;
+  color: rgba(238,231,218,.74);
+}
+
+/* Module meta row */
+.modMeta{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.10em;
+  font-weight:900;
+  color: rgba(238,231,218,.70);
+}
+.modDot{
+  width:10px; height:10px; border-radius:999px;
+  background: rgba(255,45,30,.85);
+  box-shadow: 0 0 16px rgba(255,45,30,.28);
+}
+.modKicker{ color: rgba(238,231,218,.60); }
+.modValue{ color: rgba(255,255,255,.92); }
+.modSep{ color: rgba(255,45,30,.65); }
+.modSub{ color: rgba(255,106,0,.90); }
+
+/* small icon tile in corner (extra visual) */
+.whySys .card::after{
+  content:"";
+  position:absolute;
+  top:14px; right:14px;
+  width:34px; height:34px;
+  border-radius:10px;
+  background: rgba(255,45,30,.12);
+  border:1px solid rgba(255,45,30,.25);
+  box-shadow: inset 0 0 18px rgba(255,45,30,.10);
+  opacity:.9;
+}
+
+/* Responsive */
+@media (max-width: 920px){
+  .sysStrip{ flex-direction:column; align-items:flex-start; }
+  .sysStrip__right{ justify-content:flex-start; }
+}

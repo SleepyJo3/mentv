@@ -1080,3 +1080,72 @@ details p{margin:10px 0 0; color:rgba(238,231,218,.74); line-height:1.6}
 .contentWall .cwVisual .cwPlay::after{
   inset: -24px !important;
 }
+
+/* Content Wall: PLAY icon 2x size */
+.contentWall .cwVisual .cwPlay{
+  width: 360px !important;   /* ~2x of 180 */
+  height: 360px !important;
+}
+
+/* Scale the play triangle so it matches new size */
+.contentWall .cwVisual .cwPlay::before{
+  border-top: 34px solid transparent !important;
+  border-bottom: 34px solid transparent !important;
+  border-left: 58px solid rgba(255,255,255,.92) !important;
+}
+
+/* Give more breathing room around the aura ring */
+.contentWall .cwVisual .cwPlay::after{
+  inset: -44px !important;
+}
+
+.contentWall .cwVisual .cwPlay::marker{ content:''; } /* no-op, ignore if unsupported */
+
+.contentWall .cwVisual .cwPlay{
+  position: relative; /* ensure pseudo layers work */
+}
+
+.contentWall .cwVisual .cwPlay::before{
+  position:absolute; /* ensure triangle stays above */
+}
+
+.contentWall .cwVisual .cwPlay::after{
+  pointer-events:none;
+}
+
+.contentWall .cwVisual .cwPlay::after{
+  /* keep existing aura ring as-is (do not remove its current animation) */
+}
+
+.contentWall .cwVisual .cwPlay::after{
+  content:'';
+  position:absolute;
+  inset:-44px;
+  border-radius:50%;
+  border:1px solid rgba(255,80,50,.18);
+  background:
+    conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      rgba(255,120,80,.0) 40deg,
+      rgba(255,120,80,.38) 70deg,
+      rgba(255,120,80,.0) 110deg,
+      transparent 160deg,
+      transparent 360deg
+    );
+  -webkit-mask: radial-gradient(circle, transparent 58%, #000 60%);
+  mask: radial-gradient(circle, transparent 58%, #000 60%);
+  box-shadow: 0 0 70px rgba(255,60,40,.22);
+  animation: auraSweep 2.8s linear infinite;
+  opacity:.9;
+  pointer-events:none;
+}
+
+@keyframes auraSweep{
+  0%{ transform: rotate(0deg); }
+  100%{ transform: rotate(360deg); }
+}
+
+.contentWall .cwVisual{
+  min-height: 420px;
+}

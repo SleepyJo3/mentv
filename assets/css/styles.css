@@ -1149,3 +1149,39 @@ details p{margin:10px 0 0; color:rgba(238,231,218,.74); line-height:1.6}
 .contentWall .cwVisual{
   min-height: 420px;
 }
+
+.contentWall{
+  position: relative;
+}
+
+.contentWall::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 25% 50%,
+      rgba(255,80,40,.18),
+      transparent 60%);
+  pointer-events:none;
+}
+
+.contentWall .cwVisual .cwPlay{
+  box-shadow:
+    0 0 28px rgba(255,60,40,.35),
+    inset 0 0 22px rgba(255,60,40,.35);
+}
+
+.contentWall .cwVisual .cwPlay::after{
+  inset: -18px !important;
+  border: 2px solid rgba(255,120,80,.55) !important;
+  box-shadow: none !important;
+  background: none !important;
+  -webkit-mask: none !important;
+  mask: none !important;
+  animation: ringSpin 6s linear infinite;
+}
+
+@keyframes ringSpin{
+  0%{ transform: rotate(0deg); }
+  100%{ transform: rotate(360deg); }
+}

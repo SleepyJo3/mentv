@@ -1062,3 +1062,21 @@ details p{margin:10px 0 0; color:rgba(238,231,218,.74); line-height:1.6}
     margin-bottom:32px;
   }
 }
+
+/* FORCE play icon size (override any earlier rules) */
+.contentWall .cwVisual .cwPlay{
+  width: 180px !important;
+  height: 180px !important;
+}
+
+/* make the triangle bigger so it doesn't look tiny */
+.contentWall .cwVisual .cwPlay::before{
+  border-top: 20px solid transparent !important;
+  border-bottom: 20px solid transparent !important;
+  border-left: 34px solid rgba(255,255,255,.92) !important;
+}
+
+/* aura ring spacing adjusted for bigger button */
+.contentWall .cwVisual .cwPlay::after{
+  inset: -24px !important;
+}

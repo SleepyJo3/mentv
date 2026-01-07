@@ -1096,7 +1096,7 @@ details p{margin:10px 0 0; color:rgba(238,231,218,.74); line-height:1.6}
 
 /* Give more breathing room around the aura ring */
 .contentWall .cwVisual .cwPlay::after{
-  inset: -44px !important;
+  inset: -30px !important;
 }
 
 .contentWall .cwVisual .cwPlay::marker{ content:''; } /* no-op, ignore if unsupported */
@@ -1120,7 +1120,7 @@ details p{margin:10px 0 0; color:rgba(238,231,218,.74); line-height:1.6}
 .contentWall .cwVisual .cwPlay::after{
   content:'';
   position:absolute;
-  inset:-44px;
+  inset:-30px;
   border-radius:50%;
   border:1px solid rgba(255,80,50,.18);
   background:
@@ -1133,9 +1133,9 @@ details p{margin:10px 0 0; color:rgba(238,231,218,.74); line-height:1.6}
       transparent 160deg,
       transparent 360deg
     );
-  -webkit-mask: radial-gradient(circle, transparent 58%, #000 60%);
-  mask: radial-gradient(circle, transparent 58%, #000 60%);
-  box-shadow: 0 0 70px rgba(255,60,40,.22);
+  -webkit-mask: radial-gradient(circle, transparent 64%, #000 66%);
+  mask: radial-gradient(circle, transparent 64%, #000 66%);
+  box-shadow: 0 0 48px rgba(255,60,40,.22);
   animation: auraSweep 2.8s linear infinite;
   opacity:.9;
   pointer-events:none;

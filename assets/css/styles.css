@@ -1023,27 +1023,3 @@ details p{margin:10px 0 0; color:rgba(238,231,218,.74); line-height:1.6}
     margin-bottom:32px;
   }
 }
-
-/* Disable divider/fade layers that cause banding / kill hero */
-.section-divider{ display:none !important; }
-
-/* Remove any added pseudo fade overlays (keep original backgrounds) */
-.hero::after{ content:none !important; }
-.contentWall::before,
-.contentWall::after{ content:none !important; }
-
-/* If whySys uses ::after only for fade, disable it */
-.whySys::after{ content:none !important; }
-
-/* consistent section rhythm */
-.hero{ padding-bottom: 56px; }
-.contentWall{ padding-top: 56px; padding-bottom: 56px; }
-.whySys{ padding-top: 56px; }
-
-/* hairline separators (subtle, premium) */
-.contentWall{
-  border-top: 1px solid rgba(255,255,255,.06);
-}
-.whySys{
-  border-top: 1px solid rgba(255,45,30,.12); /* slight brand hint */
-}

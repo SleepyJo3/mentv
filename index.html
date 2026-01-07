@@ -157,7 +157,7 @@
       <div class="wrap contentWall__inner">
         <div class="cwGrid">
           <div class="cwVisual">
-            <div class="cwPlay"></div>
+            <div class="cwPlay" role="button" tabindex="0" aria-label="Ugrás a csomagokhoz" data-scroll="#plans"></div>
           </div>
           <div class="cwText">
             <div class="contentWall__copy">
@@ -334,5 +334,28 @@
 
   <!-- IMPORTANT: RELATIVE PATH -->
   <script src="assets/js/order.js?v=1"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var play = document.querySelector('.contentWall .cwPlay');
+      if(!play) return;
+
+      function go(){
+        var sel = play.getAttribute('data-scroll') || '#plans';
+        var target = document.querySelector(sel);
+        if(!target) return;
+        // offset for sticky header (safe default)
+        var y = target.getBoundingClientRect().top + window.pageYOffset - 90;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+
+      play.addEventListener('click', go);
+      play.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){
+          e.preventDefault();
+          go();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
